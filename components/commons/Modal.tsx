@@ -1,16 +1,14 @@
 import React, { FC, ReactNode } from 'react'
-import { CSSProperties } from 'styled-components'
 import ModalStyle from '../styles/Modal.style'
 import Portal from './Portal'
 
 interface Props {
     children: ReactNode
-    style?: CSSProperties
     isShow: boolean
     closeFn: () => void
 }
 
-const Modal: FC<Props> = ({ children, style = {}, isShow, closeFn }) => {
+const Modal: FC<Props> = ({ children, isShow, closeFn }) => {
   if (!isShow) {
     return null
   }
@@ -19,7 +17,7 @@ const Modal: FC<Props> = ({ children, style = {}, isShow, closeFn }) => {
     <Portal>
       <ModalStyle>
         <div className="modal-background" onClick={closeFn} />
-        <div className="modal-content" style={style}>
+        <div className="modal-content">
           {children}
         </div>
       </ModalStyle>

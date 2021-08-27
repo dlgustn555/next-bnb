@@ -20,8 +20,8 @@ const ModalStyle = styled.div`
     }
 
     .modal-content {
-        width: 568px;
-        height: 614px;
+        min-width: 568px;
+        min-height: 614px;
         background-color: white;
         z-index: 11;
     }

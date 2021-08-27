@@ -5,7 +5,7 @@ import AirbnbLogoTextIcon from '../public/static/svg/logo/logo_text.svg'
 import HeaderStyle from './styles/Header.style'
 
 import useModal from './hooks/useModal'
-import SignUpModal from './SignUpModal'
+import SignUpModal from './auth/SignUpModal'
 
 const Header: FC = () => {
   const { openModal, ModalPortal } = useModal()
@@ -24,7 +24,7 @@ const Header: FC = () => {
         <button type="button" className="header-login-button">로그인</button>
       </div>
 
-      <ModalPortal style={{ backgroundColor: 'green' }}>
+      <ModalPortal>
         <SignUpModal />
       </ModalPortal>
     </HeaderStyle>
