@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import AirbnbLogoIcon from '../public/static/svg/logo/logo.svg'
 import AirbnbLogoTextIcon from '../public/static/svg/logo/logo_text.svg'
-import HeaderStyle from './styles/Header.style'
+import HeaderStyle from './Header.style'
 
 import useModal from './hooks/useModal'
 import SignUpModal from './auth/SignUpModal'
