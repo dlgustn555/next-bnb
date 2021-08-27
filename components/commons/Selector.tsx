@@ -4,12 +4,18 @@ import SelectorStyle from './Selector.style'
 interface Props extends SelectHTMLAttributes<HTMLSelectElement>{
     options?: string[]
     value?: string
+    disabledOptions?: string[]
 }
 
-const Selector: FC<Props> = ({ options = [], ...props }) => {
+const Selector: FC<Props> = ({ options = [], disabledOptions = [], ...props }) => {
   return (
     <SelectorStyle>
       <select {...props}>
+        {disabledOptions.map((option, index) => (
+          <option key={index} value={option} disabled>
+            {option}
+          </option>
+        ))}
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}

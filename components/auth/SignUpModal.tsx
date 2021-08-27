@@ -7,6 +7,9 @@ import OpenedEyeIcon from '../../public/static/svg/auth/opened_eye.svg'
 import ClosedEyeIcon from '../../public/static/svg/auth/closed_eye.svg'
 
 import Input from '../commons/Input'
+import Selector from '../commons/Selector'
+
+import { monthList, dayList, yearList } from '../../lib/staticData'
 
 const SignUpModal: FC = () => {
   const [email, setEmail] = useState('')
@@ -60,6 +63,34 @@ const SignUpModal: FC = () => {
           value={password}
           onChange={onPassword}
         />
+      </div>
+      <p className="sign-up-birthday-label">생일</p>
+      <p className="sign-up-modal-birthday-info">
+        만 18세 이상의 성인만 회원으로 가입할 수 있습니다. 생일은 다른 에어비앤비 이용자에게 공개되지 않습니다.
+      </p>
+
+      <div className="sign-up-modal-birthday-selectors">
+        <div className="sign-up-modal-birthday-month-selector">
+          <Selector
+            options={monthList}
+            disabledOptions={['월']}
+            defaultValue="월"
+          />
+        </div>
+        <div className="sign-up-modal-birthday-day-selector">
+          <Selector
+            options={dayList}
+            disabledOptions={['일']}
+            defaultValue="일"
+          />
+        </div>
+        <div className="sign-up-modal-birthday-year-selector">
+          <Selector
+            options={yearList}
+            disabledOptions={['년']}
+            defaultValue="년"
+          />
+        </div>
       </div>
     </SignUpModalStyle>
   )
