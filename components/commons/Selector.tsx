@@ -1,5 +1,5 @@
 import React, { FC, SelectHTMLAttributes } from 'react'
-import SelectorStyle from './Selector.style'
+import SelectorStyle from '../styles/Selector.style'
 
 interface Props extends SelectHTMLAttributes<HTMLSelectElement>{
     options?: string[]

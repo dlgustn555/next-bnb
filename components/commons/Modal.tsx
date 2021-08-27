@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import ModalStyle from './Modal.style'
+import ModalStyle from '../styles/Modal.style'
 import Portal from './Portal'
 
 interface Props {

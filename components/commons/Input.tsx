@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, InputHTMLAttributes } from 'react'
-import InputStyle from './Input.style'
+import InputStyle from '../styles/Input.style'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement>{
     icon?: ReactNode
