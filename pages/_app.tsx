@@ -8,6 +8,7 @@ const app = ({ Component, pageProps }: AppProps) => {
       <GlobalStyle />
       <Header />
       <Component {...pageProps} />
+      <div id="__portal" />
     </>
   )
 }
