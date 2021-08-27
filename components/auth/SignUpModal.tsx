@@ -1,5 +1,5 @@
 import React, { FC, useState, ChangeEvent } from 'react'
-import SignUpModalStyle from './SinUpModal.style'
+import SignUpModalStyle from '../styles/SinUpModal.style'
 import CloseXIcon from '../../public/static/svg/modal/modal_colose_x_icon.svg'
 import MainIcon from '../../public/static/svg/auth/mail.svg'
 import PersonIcon from '../../public/static/svg/auth/person.svg'
@@ -17,6 +17,10 @@ const SignUpModal: FC = () => {
   const [firstname, setFirstname] = useState('')
   const [password, setPassword] = useState('')
   const [hidePassword, setHidePassword] = useState(true)
+
+  const [birthYear, setBirthYear] = useState('년')
+  const [birthDay, setBirthDay] = useState('일')
+  const [birthMonth, setBirthMonth] = useState('월')
 
   const onChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value)
@@ -36,6 +40,18 @@ const SignUpModal: FC = () => {
 
   const toggleHidePassword = () => {
     setHidePassword(!hidePassword)
+  }
+
+  const onChangeBirthYear = (event: ChangeEvent<HTMLSelectElement>) => {
+    setBirthYear(event.target.value)
+  }
+
+  const onChangeBirthDay = (event: ChangeEvent<HTMLSelectElement>) => {
+    setBirthDay(event.target.value)
+  }
+
+  const onChangeBirthMonth = (event: ChangeEvent<HTMLSelectElement>) => {
+    setBirthMonth(event.target.value)
   }
 
   return (
@@ -74,21 +90,24 @@ const SignUpModal: FC = () => {
           <Selector
             options={monthList}
             disabledOptions={['월']}
-            defaultValue="월"
+            defaultValue={birthMonth}
+            onChange={onChangeBirthMonth}
           />
         </div>
         <div className="sign-up-modal-birthday-day-selector">
           <Selector
             options={dayList}
             disabledOptions={['일']}
-            defaultValue="일"
+            defaultValue={birthDay}
+            onChange={onChangeBirthDay}
           />
         </div>
         <div className="sign-up-modal-birthday-year-selector">
           <Selector
             options={yearList}
             disabledOptions={['년']}
-            defaultValue="년"
+            defaultValue={birthYear}
+            onChange={onChangeBirthYear}
           />
         </div>
       </div>
