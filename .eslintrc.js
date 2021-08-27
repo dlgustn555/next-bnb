@@ -63,6 +63,8 @@ module.exports = {
         tsx: 'never',
       }, // import 시 확장자명은 사용하지 않는다.
     ],
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off'
   },
 
   settings: {
@@ -72,4 +74,4 @@ module.exports = {
       },
     },
   },
-};
+}
