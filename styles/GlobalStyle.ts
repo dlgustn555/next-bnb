@@ -17,6 +17,13 @@ const globalStyle = css`
     text-decoration: none;
     color: ${palette.black};
   }
+
+  #__portal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
 `
 
 const GlobalStyle = createGlobalStyle`
