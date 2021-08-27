@@ -1,16 +1,16 @@
-import React, { FC, InputHTMLAttributes } from 'react'
+import React, { FC, ReactNode, InputHTMLAttributes } from 'react'
 import InputStyle from './Input.style'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement>{
-    Icon?: FC
+    icon?: ReactNode
 }
 
-const Input: FC<Props> = ({ Icon = () => null, ...props }) => {
+const Input: FC<Props> = ({ icon, ...props }) => {
   return (
-    <InputStyle iconExist={!!Icon}>
+    <InputStyle iconExist={!!icon}>
       <input {...props} />
       <div className="input-icon-wrapper">
-        <Icon />
+        {icon}
       </div>
     </InputStyle>
   )

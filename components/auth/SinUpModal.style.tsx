@@ -35,6 +35,12 @@ const SignUpModalStyle = styled.form`
             top: 16px;
         }
     }
+
+    .sign-up-password-input-wrapper {
+        svg {
+            cursor: pointer;
+        }
+    }
 `
 
 export default SignUpModalStyle
