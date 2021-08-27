@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import Header from '../components/Header'
 
 const Container = styled.div`
   font-size: 21px;
@@ -10,7 +9,7 @@ const Container = styled.div`
 const index: FC = () => {
   return (
     <Container>
-      <Header />
+      <h1>Almost before we knew it, we had left the ground.</h1>
     </Container>
   )
 }
