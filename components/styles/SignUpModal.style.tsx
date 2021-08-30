@@ -70,6 +70,12 @@ const SignUpModalStyle = styled.form`
             width: 33.3333%;
         }
     }
+
+    .sign-up-modal-submit-button-wrapper {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid ${palette.gray_eb};
+    }
 `
 
 export default SignUpModalStyle

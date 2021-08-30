@@ -1,5 +1,5 @@
 import React, { FC, useState, ChangeEvent } from 'react'
-import SignUpModalStyle from '../styles/SinUpModal.style'
+import SignUpModalStyle from '../styles/SignUpModal.style'
 import CloseXIcon from '../../public/static/svg/modal/modal_colose_x_icon.svg'
 import MainIcon from '../../public/static/svg/auth/mail.svg'
 import PersonIcon from '../../public/static/svg/auth/person.svg'
@@ -8,6 +8,7 @@ import ClosedEyeIcon from '../../public/static/svg/auth/closed_eye.svg'
 
 import Input from '../commons/Input'
 import Selector from '../commons/Selector'
+import Button from '../commons/Button'
 
 import { monthList, dayList, yearList } from '../../lib/staticData'
 
@@ -110,6 +111,10 @@ const SignUpModal: FC = () => {
             onChange={onChangeBirthYear}
           />
         </div>
+      </div>
+
+      <div className="sign-up-modal-submit-button-wrapper">
+        <Button type="submit">가입하기</Button>
       </div>
     </SignUpModalStyle>
   )
