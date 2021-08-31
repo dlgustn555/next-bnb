@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
 const connect = () => {
-  mongoose.connect('mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false').then(() => {
+  mongoose.connect('mongodb://localhost:27017/bnb?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false').then(() => {
     console.log('Mongo DB Connected!!')
   }).catch((error) => {
     console.log(error)
