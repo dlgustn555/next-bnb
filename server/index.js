@@ -1,6 +1,9 @@
 const Koa = require('koa')
 const bodyParser = require('koa-bodyparser')
 const routes = require('./routes')
+const mongodb = require('./mongodb')
+
+mongodb.connect()
 
 const app = new Koa()
 
